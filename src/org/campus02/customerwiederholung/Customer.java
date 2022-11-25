@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Customer extends Person {
 
-    private int customerNumber;
+    protected int customerNumber;
     private ArrayList<Address> addresses = new ArrayList<>();
 
     public Customer(String firstname, String lastname, int customerNumber) {
@@ -20,6 +20,11 @@ public class Customer extends Person {
         this.customerNumber = customerNumber;
 
     }*/
+
+    @Override
+    public String print() {
+        return customerNumber + ";" + super.print();
+    }
 
     public void add(Address address) {
         addresses.add(address);

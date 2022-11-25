@@ -9,6 +9,9 @@ public class DemoApp {
 //        c.setLastname("Sorglos");
 
         c.add(new Address("Grazerstraße 1", "Graz", "8010", "Country"));
+        
+        String value = c.print();
+        System.out.println("value = " + value);
 
         System.out.println(c.toString());
 

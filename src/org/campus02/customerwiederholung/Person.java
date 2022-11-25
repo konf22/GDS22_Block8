@@ -1,12 +1,17 @@
 package org.campus02.customerwiederholung;
 
 public class Person {
-    private String firstname;
-    private String lastname;
+
+    protected String firstname;
+    protected String lastname;
 
     public Person(String firstname, String lastname) {
         this.firstname = firstname;
         this.lastname = lastname;
+    }
+
+    public String print(){
+        return firstname + ";" + lastname;
     }
 
     @Override
