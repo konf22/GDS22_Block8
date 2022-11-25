@@ -9,9 +9,17 @@ public class Customer extends Person {
     private int customerNumber;
     private ArrayList<Address> addresses = new ArrayList<>();
 
-    public Customer(int customerNumber) {
+    public Customer(String firstname, String lastname, int customerNumber) {
+        super(firstname, lastname);
         this.customerNumber = customerNumber;
     }
+
+    /*public Customer(int customerNumber, String firstname, String lastname) {
+
+        super(firstname, lastname); // erster Befehl im Konstruktor
+        this.customerNumber = customerNumber;
+
+    }*/
 
     public void add(Address address) {
         addresses.add(address);
@@ -21,8 +29,8 @@ public class Customer extends Person {
     public String toString() {
         return "Customer{" +
                 "customerNumber=" + customerNumber +
-                ", firstname=" + firstname +
-                ", lastname=" + lastname +
+                ", firstname=" + getFirstname() +
+                ", lastname=" + getLastname() +
                 ", addresses=" + addresses +
                 '}';
     }

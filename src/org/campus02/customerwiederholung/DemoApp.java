@@ -4,9 +4,9 @@ public class DemoApp {
 
     public static void main(String[] args) {
 
-        Customer c = new Customer(1);
-        c.firstname = "Susi";
-        c.lastname = "Sorglos";
+        Customer c = new Customer("Susi", "Sorglos", 1);
+//        c.setFirstname("Susi");
+//        c.setLastname("Sorglos");
 
         c.add(new Address("Grazerstraße 1", "Graz", "8010", "Country"));
 
